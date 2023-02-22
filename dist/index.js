@@ -9424,7 +9424,7 @@ async function main() {
       if (status === "removed") {
         continue;
       }
-      if (!filename.startsWith("xGovs/")) {
+      if (!filename.startsWith("Proposals/")) {
         continue;
       }
       if (unchecked.some((i) => filename.endsWith(i))) {
