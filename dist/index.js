@@ -293,7 +293,7 @@ ${val.stack}`;
       const ret = getStringFromWasm0(arg0, arg1);
       return addHeapObject(ret);
     };
-    module2.exports.__wbg_readFile_9f306fdb376f9bfa = function() {
+    module2.exports.__wbg_readFile_e110ce2512873e9e = function() {
       return handleError(function(arg0, arg1) {
         const ret = readFile(getObject(arg0), getObject(arg1));
         return addHeapObject(ret);
@@ -345,7 +345,7 @@ ${val.stack}`;
     module2.exports.__wbindgen_throw = function(arg0, arg1) {
       throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    module2.exports.__wbindgen_closure_wrapper149 = function(arg0, arg1, arg2) {
+    module2.exports.__wbindgen_closure_wrapper150 = function(arg0, arg1, arg2) {
       const ret = makeMutClosure(arg0, arg1, 53, __wbg_adapter_18);
       return addHeapObject(ret);
     };
