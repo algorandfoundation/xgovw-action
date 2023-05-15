@@ -277,7 +277,7 @@ ${val.stack}`;
       const ret = false;
       return ret;
     };
-    module2.exports.__wbg_readFile_1d4d70cc4a40e911 = function() {
+    module2.exports.__wbg_readFile_b4385ecd7a90e039 = function() {
       return handleError(function(arg0, arg1) {
         const ret = readFile(getObject(arg0), getObject(arg1));
         return addHeapObject(ret);
