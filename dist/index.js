@@ -34,18 +34,6 @@ var require_xgovw_lint_js = __commonJS({
     function getObject(idx) {
       return heap[idx];
     }
-    var heap_next = heap.length;
-    function dropObject(idx) {
-      if (idx < 36)
-        return;
-      heap[idx] = heap_next;
-      heap_next = idx;
-    }
-    function takeObject(idx) {
-      const ret = getObject(idx);
-      dropObject(idx);
-      return ret;
-    }
     var WASM_VECTOR_LEN = 0;
     var cachedUint8Memory0;
     function getUint8Memory0() {
@@ -104,6 +92,18 @@ var require_xgovw_lint_js = __commonJS({
         cachedInt32Memory0 = new Int32Array(wasm.memory.buffer);
       }
       return cachedInt32Memory0;
+    }
+    var heap_next = heap.length;
+    function dropObject(idx) {
+      if (idx < 36)
+        return;
+      heap[idx] = heap_next;
+      heap_next = idx;
+    }
+    function takeObject(idx) {
+      const ret = getObject(idx);
+      dropObject(idx);
+      return ret;
     }
     var cachedTextDecoder = new TextDecoder("utf-8", { ignoreBOM: true, fatal: true });
     cachedTextDecoder.decode();
@@ -194,7 +194,7 @@ ${val.stack}`;
       return real;
     }
     function __wbg_adapter_18(arg0, arg1, arg2) {
-      wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__haedaa3ce1e85c1c7(arg0, arg1, addHeapObject(arg2));
+      wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h84e4294303cba856(arg0, arg1, addHeapObject(arg2));
     }
     function handleError(f, args) {
       try {
@@ -255,11 +255,8 @@ ${val.stack}`;
       }
     };
     function __wbg_adapter_25(arg0, arg1, arg2, arg3) {
-      wasm.wasm_bindgen__convert__closures__invoke2_mut__h0a11582004da37b8(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
+      wasm.wasm_bindgen__convert__closures__invoke2_mut__h1f3c9b090de29c8b(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
     }
-    module2.exports.__wbindgen_object_drop_ref = function(arg0) {
-      takeObject(arg0);
-    };
     module2.exports.__wbindgen_string_get = function(arg0, arg1) {
       const obj = getObject(arg1);
       const ret = typeof obj === "string" ? obj : void 0;
@@ -268,17 +265,8 @@ ${val.stack}`;
       getInt32Memory0()[arg0 / 4 + 1] = len0;
       getInt32Memory0()[arg0 / 4 + 0] = ptr0;
     };
-    module2.exports.__wbindgen_json_parse = function(arg0, arg1) {
-      const ret = JSON.parse(getStringFromWasm0(arg0, arg1));
-      return addHeapObject(ret);
-    };
-    module2.exports.__wbindgen_json_serialize = function(arg0, arg1) {
-      const obj = getObject(arg1);
-      const ret = JSON.stringify(obj === void 0 ? null : obj);
-      const ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-      const len0 = WASM_VECTOR_LEN;
-      getInt32Memory0()[arg0 / 4 + 1] = len0;
-      getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+    module2.exports.__wbindgen_object_drop_ref = function(arg0) {
+      takeObject(arg0);
     };
     module2.exports.__wbindgen_cb_drop = function(arg0) {
       const obj = takeObject(arg0).original;
@@ -289,15 +277,27 @@ ${val.stack}`;
       const ret = false;
       return ret;
     };
-    module2.exports.__wbindgen_string_new = function(arg0, arg1) {
-      const ret = getStringFromWasm0(arg0, arg1);
-      return addHeapObject(ret);
-    };
-    module2.exports.__wbg_readFile_e110ce2512873e9e = function() {
+    module2.exports.__wbg_readFile_1d4d70cc4a40e911 = function() {
       return handleError(function(arg0, arg1) {
         const ret = readFile(getObject(arg0), getObject(arg1));
         return addHeapObject(ret);
       }, arguments);
+    };
+    module2.exports.__wbindgen_json_serialize = function(arg0, arg1) {
+      const obj = getObject(arg1);
+      const ret = JSON.stringify(obj === void 0 ? null : obj);
+      const ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+      const len0 = WASM_VECTOR_LEN;
+      getInt32Memory0()[arg0 / 4 + 1] = len0;
+      getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+    };
+    module2.exports.__wbindgen_string_new = function(arg0, arg1) {
+      const ret = getStringFromWasm0(arg0, arg1);
+      return addHeapObject(ret);
+    };
+    module2.exports.__wbindgen_json_parse = function(arg0, arg1) {
+      const ret = JSON.parse(getStringFromWasm0(arg0, arg1));
+      return addHeapObject(ret);
     };
     module2.exports.__wbg_call_9855a4612eb496cb = function() {
       return handleError(function(arg0, arg1, arg2) {
@@ -345,8 +345,8 @@ ${val.stack}`;
     module2.exports.__wbindgen_throw = function(arg0, arg1) {
       throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    module2.exports.__wbindgen_closure_wrapper150 = function(arg0, arg1, arg2) {
-      const ret = makeMutClosure(arg0, arg1, 53, __wbg_adapter_18);
+    module2.exports.__wbindgen_closure_wrapper157 = function(arg0, arg1, arg2) {
+      const ret = makeMutClosure(arg0, arg1, 57, __wbg_adapter_18);
       return addHeapObject(ret);
     };
     var path = require("path").join(__dirname, "xgovw_lint_js_bg.wasm");
