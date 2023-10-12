@@ -1,6 +1,6 @@
 {
   "name": "xgovw-action",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A GitHub action to run xgovw and display the results.",
   "repository": "github:algorandfoundation/xgovw-action",
   "main": "dist/index.js",
