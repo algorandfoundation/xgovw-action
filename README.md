@@ -30,6 +30,6 @@ jobs:
 npm install         # Grab dependencies.
 npm run build       # Compile TypeScript and create bundle.
 git add .
-git commit
+git commit -m "update"
 git push            # Make the new build available.
 ```
