@@ -83,8 +83,8 @@ async function main() {
         continue;
       }
 
-      if (!filename.startsWith("Proposals/")) {
-        // Only check files in the `Proposals/` directory.
+      if (!filename.startsWith("Council/")) {
+        // Only check files in the `Council/` directory.
         continue;
       }
 
