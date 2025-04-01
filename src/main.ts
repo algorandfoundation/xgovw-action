@@ -58,7 +58,7 @@ async function main() {
 
     const uncheckedText = core.getInput("unchecked") || "";
     const unchecked = [];
-
+    core.notice(uncheckedText);
     for (let item of uncheckedText.split(",")) {
       unchecked.push(`xgov_council-${item.trim()}.md`);
     }
