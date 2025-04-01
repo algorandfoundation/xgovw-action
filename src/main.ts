@@ -60,7 +60,7 @@ async function main() {
     const unchecked = [];
 
     for (let item of uncheckedText.split(",")) {
-      unchecked.push(`xgov-${item.trim()}.md`);
+      unchecked.push(`xgov_council-${item.trim()}.md`);
     }
 
     const pull_event = context.payload as PullRequestEvent;
