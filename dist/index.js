@@ -9491,7 +9491,7 @@ async function main() {
     const uncheckedText = import_core.default.getInput("unchecked") || "";
     const unchecked = [];
     for (let item of uncheckedText.split(",")) {
-      unchecked.push(`xgov-${item.trim()}.md`);
+      unchecked.push(`xgov_council-${item.trim()}.md`);
     }
     const pull_event = context.payload;
     const pull = pull_event.pull_request;
@@ -9507,7 +9507,7 @@ async function main() {
       if (status === "removed") {
         continue;
       }
-      if (!filename.startsWith("Proposals/")) {
+      if (!filename.startsWith("Council/")) {
         continue;
       }
       if (unchecked.some((i) => filename.endsWith(i))) {
@@ -9516,6 +9516,7 @@ async function main() {
       files.push(filename);
     }
     if (!files.length) {
+      import_core.default.notice(uncheckedText);
       import_core.default.notice("no files to check");
       return;
     }
