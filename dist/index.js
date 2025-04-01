@@ -264,7 +264,7 @@ ${val.stack}`;
     module2.exports.__wbindgen_object_drop_ref = function(arg0) {
       takeObject(arg0);
     };
-    module2.exports.__wbg_readFile_698d36b76b22983e = function() {
+    module2.exports.__wbg_readFile_daf5e5ebf14ca577 = function() {
       return handleError(function(arg0, arg1) {
         const ret = readFile(getObject(arg0), getObject(arg1));
         return addHeapObject(ret);
