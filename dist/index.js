@@ -276,7 +276,7 @@ ${val.stack}`;
       const ret = arg0.queueMicrotask;
       return ret;
     };
-    module2.exports.__wbg_readFile_f1e1576da0e1f215 = function() {
+    module2.exports.__wbg_readFile_79b05b9f99a76ba7 = function() {
       return handleError(function(arg0, arg1) {
         const ret = readFile(arg0, arg1);
         return ret;
